@@ -1,3 +1,7 @@
+.virtualenv/
+db.sqlite3
+migrations/
+
 # Python
 
 # Byte-compiled / optimized / DLL files
