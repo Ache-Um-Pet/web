@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
   # information on available options.
 
 config.vm.define 'web' do |web|
- config.vm.synced_folder "../web", "/home/vagrant/web", create: true
+ config.vm.synced_folder ".", "/home/vagrant/web", create: true
 
  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
@@ -74,7 +74,6 @@ config.vm.define 'web' do |web|
  config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y git vim python-pip
-    git clone https://github.com/Ache-Um-Pet/web.git
     sudo pip install -r web/requirements.txt
  SHELL
 end
