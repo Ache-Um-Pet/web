@@ -52,6 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'acheumpet.urls'
 
+# Add new configs here
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
